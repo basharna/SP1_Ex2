@@ -1,13 +1,13 @@
 CC = gcc
 CFLAGS = -g -Wall
 
-all: connections my_KnapSack
+all: my_graph my_Knapsack
 
-my_KnapSack: my_KnapSack.o
-	${CC} ${CFLAGS} my_KnapSack.o -o my_KnapSack
+my_Knapsack: my_Knapsack.o
+	${CC} ${CFLAGS} my_Knapsack.o -o my_Knapsack
 
-connections: my_graph.o my_mat.o
-	${CC} ${CFLAGS} my_graph.o my_mat.o -o connections
+my_graph: my_graph.o my_mat.o
+	${CC} ${CFLAGS} my_graph.o my_mat.o -o my_graph
 
 main.o: my_graph.c my_mat.h
 	${CC} -c my_graph.c
@@ -15,8 +15,8 @@ main.o: my_graph.c my_mat.h
 my_mat.o: my_mat.c my_mat.h
 	${CC} -c my_mat.c
 
-my_KnapSack.o: my_KnapSack.c
-	${CC} -c my_KnapSack.c
+my_Knapsack.o: my_Knapsack.c
+	${CC} -c my_Knapsack.c
 
 clean:
-	rm -f *.o *.a *.so connections my_KnapSack
+	rm -f *.o *.a *.so my_graph my_Knapsack
