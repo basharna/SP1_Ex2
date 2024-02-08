@@ -52,7 +52,7 @@ int main() {
     setInputs(items, weights, values);
     int profit = knapSack(weights, values, result);
     printf("Maximum profit: %d\n", profit);
-    printf("Selected items: ");
+    printf("Selected items:");
     for(int i = 0; i < MAXITEMS; i++){
         if(result[i] == 1){
             printf(" %c", items[i]);
