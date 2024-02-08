@@ -4,7 +4,6 @@
 int main()
 {
     int mat[10][10];
-
     char c;
     int i, j;
     while(1){
@@ -15,7 +14,9 @@ int main()
             setMatrix(mat);
             break;
         case 'B':
-
+            scanf("%d", &i);
+            scanf("%d", &j);
+            printPathExists(i, j);
             break;
         case 'C':
             scanf("%d", &i);
