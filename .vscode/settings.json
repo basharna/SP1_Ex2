@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/Users/bashar/Personal/Uni Ariel/SP/Ex2",
+            "binaryPath": "/Users/bashar/Personal/Uni Ariel/SP/Ex2/mains",
+            "binaryArgs": []
+        }
+    ]
+}
