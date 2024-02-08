@@ -55,7 +55,7 @@ int main() {
     printf("Selected items: ");
     for(int i = 0; i < MAXITEMS; i++){
         if(result[i] == 1){
-            printf("%c ", items[i]);
+            printf(" %c", items[i]);
         }
     }
     printf("\n");
