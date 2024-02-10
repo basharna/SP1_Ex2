@@ -4,6 +4,10 @@
 #define MAXWEIGHT 20
 #define MAXITEMS 5 
 
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
 void setInputs(char items[],int weights[], int values[]){
     int i;
     for(i = 0; i < MAXITEMS; i++){
@@ -23,7 +27,7 @@ int knapSack (int weights[], int values[] , int selected_bool[]){
             if (i == 0 || w == 0) {
                 dp[i][w] = 0;
             } else if (weights[i - 1] <= w) {
-                dp[i][w] = fmax(values[i - 1] + dp[i - 1][w - weights[i - 1]], dp[i - 1][w]);
+                dp[i][w] = max(values[i - 1] + dp[i - 1][w - weights[i - 1]], dp[i - 1][w]);
             } else {
                 dp[i][w] = dp[i - 1][w];
             }
